@@ -8,15 +8,11 @@ namespace ConsoleApplication
         public static void Main(string[] args)
         {
             int n;
-            try
-            {
-                n = Convert.ToInt32(Console.ReadLine());
-            }
-            catch (FormatException)
+            while (!int.TryParse(Console.ReadLine(), out n))
             {
                 Console.WriteLine("Вы ввели недопустимое значение!");
-                return;
             }
+
             BigInteger res = new BigInteger(0);
             for (int i = 1; i <= n; i++)
             {
