@@ -1,0 +1,6 @@
+D:\БГУИР\Прога\tilyupo\3\bin\Debug\3.exe.config
+D:\БГУИР\Прога\tilyupo\3\bin\Debug\3.exe
+D:\БГУИР\Прога\tilyupo\3\bin\Debug\3.pdb
+D:\БГУИР\Прога\tilyupo\3\obj\Debug\3.csprojResolveAssemblyReference.cache
+D:\БГУИР\Прога\tilyupo\3\obj\Debug\3.exe
+D:\БГУИР\Прога\tilyupo\3\obj\Debug\3.pdb
