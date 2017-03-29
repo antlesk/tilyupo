@@ -1,0 +1,5 @@
+D:\БГУИР\Прога\tilyupo\4\4_2_25\bin\Debug\4_2_25.exe.config
+D:\БГУИР\Прога\tilyupo\4\4_2_25\bin\Debug\4_2_25.exe
+D:\БГУИР\Прога\tilyupo\4\4_2_25\bin\Debug\4_2_25.pdb
+D:\БГУИР\Прога\tilyupo\4\4_2_25\obj\Debug\4_2_25.exe
+D:\БГУИР\Прога\tilyupo\4\4_2_25\obj\Debug\4_2_25.pdb
