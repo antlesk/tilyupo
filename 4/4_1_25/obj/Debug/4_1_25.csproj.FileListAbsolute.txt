@@ -1,6 +1,0 @@
-D:\БГУИР\Прога\tilyupo\4\4\bin\Debug\4.exe.config
-D:\БГУИР\Прога\tilyupo\4\4\bin\Debug\4.exe
-D:\БГУИР\Прога\tilyupo\4\4\bin\Debug\4.pdb
-D:\БГУИР\Прога\tilyupo\4\4\obj\Debug\4_1_25.csprojResolveAssemblyReference.cache
-D:\БГУИР\Прога\tilyupo\4\4\obj\Debug\4.exe
-D:\БГУИР\Прога\tilyupo\4\4\obj\Debug\4.pdb

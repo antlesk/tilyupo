@@ -11,12 +11,18 @@ namespace _4_2_25
     {
         static void Main(string[] args)
         {
-            string file = Console.ReadLine();
+            Console.WriteLine("Enter path to C++ file (empty for TestProgram.cpp");
+            string filePath = Console.ReadLine();
+
+            if (string.IsNullOrEmpty(filePath))
+            {
+                filePath = @"D:\БГУИР\Прога\tilyupo\4\4_2_25\TestProgram.cpp";
+            }
 
             FileStream fileStream = null;
             try
             {
-                fileStream = new FileStream(file, FileMode.Open);
+                fileStream = new FileStream(filePath, FileMode.Open);
 
                 var buffer = new byte[fileStream.Length];
                 fileStream.Seek(3, SeekOrigin.Begin);

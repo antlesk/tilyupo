@@ -10,6 +10,8 @@ namespace _4
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter your text (double enter to exit");
+
             string line;
             List<string> lines = new List<string>();
             while ((line = Console.ReadLine()) != "")

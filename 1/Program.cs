@@ -7,6 +7,8 @@ namespace ConsoleApplication
     {
         public static void Main(string[] args)
         {
+            Console.WriteLine("Введите N");
+
             int n;
             while (!int.TryParse(Console.ReadLine(), out n))
             {

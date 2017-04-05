@@ -17,7 +17,8 @@ namespace _3
         static void Main(string[] args)
         {
             int n;
-            
+
+            Console.WriteLine("Введите N");
             while (!int.TryParse(Console.ReadLine(), out n))
             {
                 Console.WriteLine("Wrong input!");

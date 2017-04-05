@@ -10,13 +10,14 @@ namespace _5_1_2
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Enter two numbers");
             string[] input = Console.ReadLine().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries).
                 ToArray();
 
             var a = new CustomBigUInt(input[0]);
             var b = new CustomBigUInt(input[1]);
 
-            Console.WriteLine(a * b / GCD(a, b));
+            Console.WriteLine($"GCD = {a * b / GCD(a, b)}");
 
             Console.ReadKey();
         }
