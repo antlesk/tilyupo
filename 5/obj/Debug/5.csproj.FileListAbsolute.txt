@@ -1,0 +1,5 @@
+D:\БГУИР\Прога\tilyupo\5\bin\Debug\5.exe.config
+D:\БГУИР\Прога\tilyupo\5\bin\Debug\5.exe
+D:\БГУИР\Прога\tilyupo\5\bin\Debug\5.pdb
+D:\БГУИР\Прога\tilyupo\5\obj\Debug\5.exe
+D:\БГУИР\Прога\tilyupo\5\obj\Debug\5.pdb

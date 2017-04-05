@@ -1,0 +1,5 @@
+D:\БГУИР\Прога\tilyupo\2\2.2.6\bin\Debug\2.2.6.exe.config
+D:\БГУИР\Прога\tilyupo\2\2.2.6\bin\Debug\2.2.6.exe
+D:\БГУИР\Прога\tilyupo\2\2.2.6\bin\Debug\2.2.6.pdb
+D:\БГУИР\Прога\tilyupo\2\2.2.6\obj\Debug\2.2.6.exe
+D:\БГУИР\Прога\tilyupo\2\2.2.6\obj\Debug\2.2.6.pdb
