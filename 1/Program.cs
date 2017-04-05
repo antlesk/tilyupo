@@ -24,6 +24,8 @@ namespace ConsoleApplication
                 res += curr;
             }
             Console.WriteLine("Результат: " + res.ToString());
+
+            Console.ReadKey();
         }
     }
 }

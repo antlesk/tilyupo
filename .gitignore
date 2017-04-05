@@ -1,4 +1,12 @@
 # Visual Studio Code cache/options directory
+
 .vscode/
+*/
+.vscode/
+*/
 */.vscode/
-*/*/.vscode/
+.vs/
+*/
+.vs/
+*/
+*/.vs/
