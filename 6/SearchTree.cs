@@ -19,7 +19,7 @@ namespace _5_2_26
         }
 
         private Node _root = null;
-        private Random rand = new Random();
+        private static readonly Random rand = new Random(1);
 
         public SearchTree(IEnumerable list)
         {
@@ -32,43 +32,13 @@ namespace _5_2_26
         public SearchTree()
         {
         }
-        private Node Merge(Node firstTree, Node secondTree)
-        {
-            if (firstTree == null)
-            {
-                return secondTree;
-            }
-
-            if (secondTree == null)
-            {
-                return firstTree;
-            }
-
-            if (firstTree.Value > secondTree.Value)
-            {
-                Node temp = firstTree;
-                firstTree = secondTree;
-                secondTree = temp;
-            }
-
-            Node result;
-            if (rand.Next() % 2 == 0)
-            {
-                result = firstTree;
-
-                firstTree.Right = Merge(firstTree.Right, secondTree);
-            }
-            else
-            {
-                result = secondTree;
-
-                result.Left = Merge(result.Left, firstTree);
-            }
-
-            return result;
-        }
 
         public bool Find(int value)
+        {
+            return FindNode(value) != null;
+        }
+
+        private Node FindNode(int value)
         {
             var currentNode = _root;
 
@@ -84,44 +54,76 @@ namespace _5_2_26
                 }
                 else
                 {
-                    return true;
+                    return currentNode;
                 }
             }
 
-            return false;
+            return null;
         }
 
-        public void Pop(int value)
+        public void Remove(int value)
         {
-            var currentNode = _root;
-
-            while (currentNode != null)
+            if (!Find(value))
             {
-                if (currentNode.Value > value)
+                return;
+            }
+            
+            RemoveNode(FindNode(value));
+        }
+
+        private void RemoveNode(Node node)
+        {
+            if (node == null)
+            {
+                return;
+            }
+            else if (node.Left == null && node.Right == null)
+            {
+                if (node.Parent != null)
                 {
-                    currentNode = currentNode.Left;
-                }
-                else if (currentNode.Value < value)
-                {
-                    currentNode = currentNode.Right;
-                }
-                else
-                {
-                    Node newNode = Merge(currentNode.Left, currentNode.Right);
-                    if (currentNode.Parent == null)
+                    if (node.Value < node.Parent.Value)
                     {
-                        _root = newNode;
-                    }
-                    else if (currentNode.Parent.Value > currentNode.Value)
-                    {
-                        currentNode.Parent.Left = newNode;
+                        node.Parent.Left = null;
                     }
                     else
                     {
-                        currentNode.Parent.Right = newNode;
+                        node.Parent.Right = null;
                     }
+                }
+                else
+                {
+                    _root = null;
+                }
+            }
+            else if (node.Right == null)
+            {
+                node.Value = node.Left.Value;
+                node.Right = node.Left.Right;
+                node.Left = node.Left.Left;
+            }
+            else if (node.Left == null)
+            {
+                node.Value = node.Right.Value;
+                node.Left = node.Right.Left;
+                node.Right = node.Right.Right;
+            }
+            else
+            {
+                var newNode = node.Right;
+                while (newNode.Left != null)
+                {
+                    newNode = newNode.Left;
+                }
 
-                    break;
+                if (newNode == node.Right)
+                {
+                    node.Value = newNode.Value;
+                    node.Right = newNode.Right;
+                }
+                else
+                {
+                    node.Value = newNode.Value;
+                    RemoveNode(newNode);
                 }
             }
         }
@@ -136,19 +138,17 @@ namespace _5_2_26
             if (_root == null)
             {
                 _root = new Node { Value = value };
-
                 return;
             }
 
-            Node currentNode = _root;
+            var currentNode = _root;
             while (true)
             {
-                if (currentNode.Value > value)
+                if (value < currentNode.Value)
                 {
                     if (currentNode.Left == null)
                     {
                         currentNode.Left = new Node { Value = value, Parent = currentNode };
-
                         break;
                     }
                     else
@@ -161,7 +161,6 @@ namespace _5_2_26
                     if (currentNode.Right == null)
                     {
                         currentNode.Right = new Node { Value = value, Parent = currentNode };
-
                         break;
                     }
                     else
@@ -174,24 +173,24 @@ namespace _5_2_26
 
         public IEnumerator<int> GetEnumerator()
         {
-            foreach (var item in Go(_root))
+            foreach (var item in WalkOn(_root))
             {
                 yield return item;
             }
         }
 
-        private IEnumerable<int> Go(Node node)
+        private IEnumerable<int> WalkOn(Node node)
         {
             if (node != null)
             {
-                foreach (var item in Go(node.Left))
+                foreach (var item in WalkOn(node.Left))
                 {
                     yield return item;
                 }
 
                 yield return node.Value;
 
-                foreach (var item in Go(node.Right))
+                foreach (var item in WalkOn(node.Right))
                 {
                     yield return item;
                 }
@@ -200,7 +199,7 @@ namespace _5_2_26
 
         IEnumerator IEnumerable.GetEnumerator()
         {
-            return this.GetEnumerator();
+            return GetEnumerator();
         }
     }
 }

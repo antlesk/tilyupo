@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-namespace _5_1_2
+namespace _5_2_26
 {
     sealed class Node<T>
     {

@@ -21,7 +21,7 @@ namespace _5_1_2
                 Digits.Add(Convert.ToInt32(number[i].ToString()));
             }
 
-            this.Trim();
+            Trim();
         }
 
         public CustomBigUInt()
@@ -46,7 +46,7 @@ namespace _5_1_2
 
         private void Trim()
         {
-            while (Digits[Digits.Length - 1] == 0 && Digits.Length > 1) Digits.Pop(Digits.Length - 1);
+            while (Digits[Digits.Length - 1] == 0 && Digits.Length > 1) Digits.Remove(Digits.Length - 1);
         }
 
         public override bool Equals(object obj)

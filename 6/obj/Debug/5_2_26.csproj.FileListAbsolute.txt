@@ -4,3 +4,9 @@ D:\БГУИР\Прога\tilyupo\5_2_26\bin\Debug\5_2_26.exe
 D:\БГУИР\Прога\tilyupo\5_2_26\bin\Debug\5_2_26.pdb
 D:\БГУИР\Прога\tilyupo\5_2_26\obj\Debug\5_2_26.exe
 D:\БГУИР\Прога\tilyupo\5_2_26\obj\Debug\5_2_26.pdb
+D:\БГУИР\Прога\tilyupo\6\bin\Debug\5_2_26.exe.config
+D:\БГУИР\Прога\tilyupo\6\bin\Debug\5_2_26.exe
+D:\БГУИР\Прога\tilyupo\6\bin\Debug\5_2_26.pdb
+D:\БГУИР\Прога\tilyupo\6\obj\Debug\5_2_26.csprojResolveAssemblyReference.cache
+D:\БГУИР\Прога\tilyupo\6\obj\Debug\5_2_26.exe
+D:\БГУИР\Прога\tilyupo\6\obj\Debug\5_2_26.pdb
